@@ -1,0 +1,6 @@
+payload_bytes,tampered_ciphertext_rejected
+65536,True
+262144,True
+1048576,True
+4194304,True
+10485760,True

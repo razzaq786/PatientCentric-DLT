@@ -1,0 +1,28 @@
+{
+  "experiment": "AES-256-GCM encryption/decryption and SHA-256 hashing microbenchmark",
+  "scope": "isolated local cryptographic microbenchmark; not integrated with PCRIM, IPFS, or Ethereum",
+  "payloads": "synthetic random bytes; no real patient data",
+  "repetitions_per_size": 30,
+  "warmup_batches_per_size": 3,
+  "operations_per_timed_sample": 20,
+  "sizes_bytes": [
+    65536,
+    262144,
+    1048576,
+    4194304,
+    10485760
+  ],
+  "aes": "AES-256-GCM; fresh 96-bit nonce for each encryption; 128-bit authentication tag",
+  "hash": "SHA-256",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cryptography_package": "46.0.4",
+  "cpu_logical_count": 3,
+  "key_handling": "one ephemeral random key generated once for this benchmark run; not persisted",
+  "cpu_model_reported_by_host": "Intel Xeon Platinum 8573C; container exposes 3 logical CPUs",
+  "limitations": [
+    "does not measure IPFS upload/download, Ethereum transactions, gas, or application end-to-end latency",
+    "does not validate the encryption/key-management implementation in the published repositories",
+    "results are specific to this execution environment and should not be generalized to production servers"
+  ]
+}
